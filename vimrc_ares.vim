@@ -442,8 +442,8 @@ inoremap <expr><space>  pumvisible() ? neocomplcache#close_popup() . "\<SPACE>" 
 """""""""""""""""""""""""""""""""""""
 " thrift.vim
 """""""""""""""""""""""""""""""""""""
-au BufRead,BufNewFile *.thrift set filetype=thrift
-au! Syntax thrift source ~/.vim/thrift.vim
+"au BufRead,BufNewFile *.thrift set filetype=thrift
+"au! Syntax thrift source ~/.vim/thrift.vim
 """""""""""""""""""""""""""""""""""""
 " blade.vim
 """""""""""""""""""""""""""""""""""""
