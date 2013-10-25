@@ -50,7 +50,11 @@ set statusline=\ %<%F[%1*%M%*%n%R%H]%=\ %y\ %0(%{&fileformat}\ %{&encoding}\ %c:
 """""""""""""""""""""""""""""""""""""
 "Enable syntax highlight
 syntax enable
-
+if &term =~ '^\(xterm\|screen\)$' && $COLORTERM == 'gnome-terminal'
+  set t_Co=256
+else
+  set t_Co=88
+endif
 "set colorscheme
 "colorscheme elflord
 "colorscheme molokai
