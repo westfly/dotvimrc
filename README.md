@@ -1,4 +1,0 @@
-dotvimrc
-========
-
-vimrc with vundle

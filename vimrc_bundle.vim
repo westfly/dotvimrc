@@ -1,53 +1,69 @@
+"""""""""""""""""""Configuration of Dependence""""""""""""""
+"package dependence:  ctags
+""python dependence:  pep8, pyflake pylint
 """""""""""""""""""Configuration of Vundle"""""""""""""""""""
 set nocompatible
 filetype off
 set rtp+=~/.vim/bundle/vundle
-call vundle#rc('$HOME/.vim/addon/')
+" call vundle#rc('$HOME/.vim/bundle')
+call vundle#rc()    " default
+" vim plugin bundle control, command model
+" :BundleInstall     install
+" :BundleInstall!    update
+" :BundleSearch(!) foo - search(or refresh cache first) for foo
+" :BundleClean       remove plugin not in list (warning)
+
 Bundle 'gmarik/vundle'
 filetype plugin indent on     " required!
 filetype on
-"about ui
+"""""""""""""Configure about vim GUI""""""""""
 Bundle 'winmanager'
-Bundle 'taglist.vim'
-Bundle 'Tagbar'
-Bundle 'bufexplorer.zip'
-Bundle 'The-NERD-tree'
-Bundle 'FencView.vim'
-Bundle 'Conque-Shell'
-"Bundle 'CSApprox'
-"Auto Complete"
-Bundle 'OmniCppComplete'
-Bundle 'Shougo/neocomplcache'
-Bundle 'rkulla/pydiction'
+Bundle 'scrooloose/nerdtree'
+Bundle 'jistr/vim-nerdtree-tabs'
+Bundle 'fholgado/minibufexpl.vim'
+Bundle 'ervandew/supertab'
+Bundle 'altercation/vim-colors-solarized'
+let g:solarized_termtrans=1
+let g:solarized_contrast="normal"
+let g:solarized_visibility="normal"
+colorscheme solarized
+"reference 
+""http://www.zlovezl.cn/articles/my-vim-plugins-for-python/
+" Bundle 'godlygeek/csapprox'
 
-Bundle 'SuperTab'
-Bundle 'vimwiki'
-"Bundle 'Vimpress'
-Bundle 'Markdown'
-"Bundle 'LaTeX-Suite-aka-Vim-LaTeX'
-Bundle 'c.vim'
-Bundle 'a.vim'
-Bundle 'grep.vim'
-Bundle 'genutils'
-Bundle 'snipMate'
-Bundle 'Shell.vim'
-Bundle 'bash-support.vim'
-"can't load and point to vim-scripts
-"Bundle 'vim-scripts/stlref.vim'
-Bundle 'vim-scripts/echofunc.vim'
-Bundle 'vim-scripts/awk.vim'
-Bundle 'vim-scripts/matchit.zip'
-"Bundle 'vim-scripts/taglist.vim'
-Bundle 'Lokaltog/vim-powerline'
-Bundle 'kien/rainbow_parentheses.vim'
-"thirdparty"
-"Bundle 'uarun/vim-protobuf'
+Bundle 'tpope/vim-pathogen'
+execute pathogen#infect()
 Bundle 'scrooloose/syntastic'
+" auto complete single or double quotation marks
+Bundle 'Raimondi/delimitMate'
+Bundle 'bling/vim-airline'
+Bundle 'MarcWeber/vim-addon-mw-utils'
+Bundle "tomtom/tlib_vim"
+Bundle "garbas/vim-snipmate"
+Bundle "honza/vim-snippets"
+Bundle 'Shougo/neocomplcache.vim'
+""""""""""""""""""""""""""""""""""""""""""""""""
+"               Tools 
+""""""""""""""""""""""""""""""""""""""""""""""""
+"让某些插件可以在后台干活（例如生成缓存，扫描文件夹）
+"不会卡住vim的界面, vimshell 也依赖之
+Bundle 'Shougo/vimproc.vim'
+Bundle 'Shougo/vimshell.vim'
+" sublime text中的ctrl-p一样，可以fuzzy地查找文件
+Bundle 'kien/ctrlp.vim'
+Bundle 'plasticboy/vim-markdown'
+""""""""""""""""""""""""""""""""""""""""""""""""
+"                C/C++ 
+""""""""""""""""""""""""""""""""""""""""""""""""
+Bundle 'majutsushi/tagbar'
 Bundle 'scrooloose/nerdcommenter'
-Bundle 'bronson/vim-trailing-whitespace'
-"go-highlight"
-Bundle 'Blackrush/vim-gocode'
-"json
-Bundle 'elzr/vim-json'
-Bundle 'westfly/addon.vim'
-
+let g:vim_markdown_folding_disabled=1
+" supper than a.vim
+Bundle 'derekwyatt/vim-fswitch'
+""""""""""""""""""""""""""""""""""""""""""""""""
+"                Python 
+""""""""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""
+"                 Golang
+""""""""""""""""""""""""""""""""""""""""""""""""
+Bundle 'jnwhiteh/vim-golang'
