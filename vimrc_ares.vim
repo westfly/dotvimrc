@@ -49,8 +49,7 @@ endif
 
 " set colorscheme
 " colorscheme solarized
-" solarized
-" colorscheme desert 
+" colorscheme desert
 
 " return OS type, eg: windows, or linux, mac, et.st..
 function! MySys()
@@ -162,13 +161,13 @@ let g:neocomplcache_min_syntax_length = 2
 " AutoComplPop like behavior.
 "let g:neocomplcache_enable_auto_select = 1
 inoremap <expr><space>  pumvisible() ? neocomplcache#close_popup() . "\<SPACE>" : "\<SPACE>"
-autocmd FileType python set omnifunc=pythoncomplete#Complete  
-autocmd FileType javascrīpt set omnifunc=javascriptcomplete#CompleteJS  
-autocmd FileType html set omnifunc=htmlcomplete#CompleteTags  
-autocmd FileType css set omnifunc=csscomplete#CompleteCSS  
-autocmd FileType xml set omnifunc=xmlcomplete#CompleteTags  
-autocmd FileType php set omnifunc=phpcomplete#CompletePHP  
-autocmd FileType c set omnifunc=ccomplete#Complete    
+autocmd FileType python set omnifunc=pythoncomplete#Complete
+autocmd FileType javascrīpt set omnifunc=javascriptcomplete#CompleteJS
+autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
+autocmd FileType css set omnifunc=csscomplete#CompleteCSS
+autocmd FileType xml set omnifunc=xmlcomplete#CompleteTags
+autocmd FileType php set omnifunc=phpcomplete#CompletePHP
+autocmd FileType c set omnifunc=ccomplete#Complete
 if !exists('g:neocomplcache_omni_patterns')
   let g:neocomplcache_omni_patterns = {}
 endif
@@ -207,7 +206,7 @@ let g:airline#extensions#tabline#enabled = 1 "顶部tab栏显示
 let g:airline_theme                      = "bubblegum" "设定主题
 "
 "
-BufEnter *.cpp let b:fswitchdst = 'hpp,h' | let b:fswitchlocs = './,./include,../include'
+autocmd BufEnter *.cpp let b:fswitchdst = 'hpp,h' | let b:fswitchlocs = './,./include,../include'
 au BufEnter *.cc let b:fswitchdst = 'hh,h' | let b:fswitchlocs = './include,./,../include'
 au BufEnter *.hh let b:fswitchdst = 'cc,cpp' | let b:fswitchlocs = '../,./'
 au BufEnter *.h let b:fswitchdst = 'cpp,cc' | let b:fswitchlocs = './,../'
@@ -217,7 +216,7 @@ function AddExecuteMode()
   if getline(1) =~ "^#!/bin/*"
     silent !chmod a+x <afile>
   endif
-endfunction 
+endfunction
 au BufWritePost * call AddExecuteMode()
 "from http://ppwwyyxx.com/misc/vim.html
 func HighlightFunctionsAndClasses()
@@ -282,4 +281,6 @@ nnoremap <Leader>rr :call InstantRun() <CR>
 nnoremap <Leader>mk :call Make()<CR>
 nnoremap <Leader>mr :!make run <CR>
 nnoremap <Leader>make :call FindMakefile()<CR>
-
+"""""
+let g:snips_author="yweiyun@gmail.com"
+let g:snips_company="Free Inc"
