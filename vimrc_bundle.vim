@@ -27,7 +27,7 @@ let g:solarized_termtrans=1
 let g:solarized_contrast="normal"
 let g:solarized_visibility="normal"
 colorscheme solarized
-"reference 
+"reference
 ""http://www.zlovezl.cn/articles/my-vim-plugins-for-python/
 " Bundle 'godlygeek/csapprox'
 
@@ -43,7 +43,7 @@ Bundle "garbas/vim-snipmate"
 Bundle "honza/vim-snippets"
 Bundle 'Shougo/neocomplcache.vim'
 """"""""""""""""""""""""""""""""""""""""""""""""
-"               Tools 
+"               Tools
 """"""""""""""""""""""""""""""""""""""""""""""""
 "让某些插件可以在后台干活（例如生成缓存，扫描文件夹）
 "不会卡住vim的界面, vimshell 也依赖之
@@ -52,8 +52,9 @@ Bundle 'Shougo/vimshell.vim'
 " sublime text中的ctrl-p一样，可以fuzzy地查找文件
 Bundle 'kien/ctrlp.vim'
 Bundle 'plasticboy/vim-markdown'
+Bundle 'westfly/vim-rabbit'
 """"""""""""""""""""""""""""""""""""""""""""""""
-"                C/C++ 
+"                C/C++
 """"""""""""""""""""""""""""""""""""""""""""""""
 Bundle 'majutsushi/tagbar'
 Bundle 'scrooloose/nerdcommenter'
@@ -61,7 +62,7 @@ let g:vim_markdown_folding_disabled=1
 " supper than a.vim
 Bundle 'derekwyatt/vim-fswitch'
 """"""""""""""""""""""""""""""""""""""""""""""""
-"                Python 
+"                Python
 """"""""""""""""""""""""""""""""""""""""""""""""
 """"""""""""""""""""""""""""""""""""""""""""""""
 "                 Golang
